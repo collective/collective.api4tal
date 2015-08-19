@@ -6,34 +6,33 @@
 collective.api4tal
 ==============================================================================
 
-Tell me what your product does
+Plone.api for TAL, use in pt file.
+
+The plone.api is an elegant and simple API, built for humans wishing to develop with Plone.
+
+But, at template file(*.pt), these useful functions can not be used directly, such as 'api.portal.get()'
+
+Through browerview's design, so that these functions can be used on the pt file.
 
 Features
 --------
 
-- Can be bullet points
-
+- **@@portal_get** mapping to **api.portal.get()**
+- **@@user_get_current** mapping to **api.user.get_current()**
+- **@@user_is_anonymous** mapping to **api.user.is_anonymous()**
 
 Examples
 --------
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+For example, you can use **@@user_is_anonymous** at template, such as:
+<div tal:condition="context/@@user_is_anonymous">
+    ...
+</div>
 
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
+or, you can use **@@portal_get** at template, such as:
+<div tal:define="portal context/@@portal_get">
+    ...
+</div>
 
 Installation
 ------------
@@ -47,7 +46,6 @@ Install collective.api4tal by adding it to your buildout::
     eggs =
         collective.api4tal
 
-
 and then running "bin/buildout"
 
 
@@ -56,14 +54,13 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.api4tal/issues
 - Source Code: https://github.com/collective/collective.api4tal
-- Documentation: https://docs.plone.org/foo/bar
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+We have a mailing list located at: andy@mingtak.com.tw
 
 
 License
