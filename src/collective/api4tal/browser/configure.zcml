@@ -1,0 +1,43 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.api4tal">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+<!--  <browser:jbot
+      directory="overrides"
+      layer="collective.api4tal.interfaces.ICollectiveApi4TalLayer"
+      />
+-->
+  <!-- Publish static files -->
+<!--  <browser:resourceDirectory
+      name="collective.api4tal"
+      directory="static"
+      />
+-->
+
+  <!-- browserview for plone.api -->
+    <browser:page
+          for="*"
+          name="portal_get"
+          permission="zope2.Public"
+          class=".api4tal.PortalGet"
+          />
+
+    <browser:page
+          for="*"
+          name="user_get_current"
+          permission="zope2.Public"
+          class=".api4tal.UserGetCurrent"
+          />
+
+    <browser:page
+          for="*"
+          name="user_is_anonymous"
+          permission="zope2.Public"
+          class=".api4tal.User_Is_Anonymous"
+          />
+
+</configure>
