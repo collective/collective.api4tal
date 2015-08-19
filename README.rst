@@ -25,14 +25,16 @@ Examples
 --------
 
 For example, you can use **@@user_is_anonymous** at template, such as:
-<div tal:condition="context/@@user_is_anonymous">
+
+    <div tal:condition="context/@@user_is_anonymous">
     ...
-</div>
+    </div>
 
 or, you can use **@@portal_get** at template, such as:
-<div tal:define="portal context/@@portal_get">
+
+    <div tal:define="portal context/@@portal_get">
     ...
-</div>
+    </div>
 
 Installation
 ------------
