@@ -30,7 +30,7 @@
           for="*"
           name="user_get_current"
           permission="zope2.Public"
-          class=".api4tal.UserGetCurrent"
+          class=".api4tal.User_Get_Current"
           />
 
     <browser:page

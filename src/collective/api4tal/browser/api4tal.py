@@ -9,7 +9,7 @@ class PortalGet(BrowserView):
         return api.portal.get()
 
 
-class UserGetCurrent(BrowserView):
+class User_Get_Current(BrowserView):
 
     def __call__(self):
         return api.user.get_current()
