@@ -3,6 +3,12 @@ from Products.Five.browser import BrowserView
 from plone import api
 
 
+class User_Get_Roles(BrowserView):
+
+    def __call__(self):
+        return api.user.get_roles()
+
+
 class PortalGet(BrowserView):
 
     def __call__(self):

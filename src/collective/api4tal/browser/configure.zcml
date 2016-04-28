@@ -40,4 +40,11 @@
           class=".api4tal.User_Is_Anonymous"
           />
 
+    <browser:page
+          for="*"
+          name="user_get_roles"
+          permission="zope2.Public"
+          class=".api4tal.User_Get_Roles"
+          />
+
 </configure>
